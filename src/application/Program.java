@@ -2,14 +2,16 @@ package application;
 
 import java.util.Scanner;
 
+import entities.WinCheck;
+
 public class Program {
 
 	public static void main(String[] args) {
 		Scanner read = new Scanner(System.in);
-		String player1 = "X";
-		String player2 = "O";
+
 //board1	_______________________________________________	
 		String[][] board = new String[3][3];
+		WinCheck winCheck = new WinCheck();
 
 		for (int i = 0; i < 3; i++) {
 			System.out.print(i + " ");
@@ -22,14 +24,11 @@ public class Program {
 		for (int i = 0; i < 3; i++) {
 			System.out.print("    " + i);
 		}
-		for (int i = 0; i < 3; i++) {
-			for (int j = 0; j < 3; j++) {
-			}
-		}
+
 //*Player 1 turn	_________________________________________
 		System.out.println();
 		System.out.println("--------------------------");
-		System.out.println("PLAYER 1:");
+		System.out.println("        PLAYER 1");
 
 		System.out.print("Choose line: ");
 		int line1 = read.nextInt();
@@ -55,7 +54,7 @@ public class Program {
 //**Player 2 turn
 		System.out.println();
 		System.out.println("--------------------------");
-		System.out.println("PLAYER 2:");
+		System.out.println("        PLAYER 2");
 
 		System.out.print("Choose line: ");
 		int line2 = read.nextInt();
@@ -76,12 +75,12 @@ public class Program {
 			System.out.println();
 		}
 		for (int i = 0; i < 3; i++) {
-			System.out.print("    " + i);
+			System.out.print("     " + i);
 		}
 //*Player 1 turn _________________________________________
 		System.out.println();
 		System.out.println("--------------------------");
-		System.out.println("PLAYER 1:");
+		System.out.println("        PLAYER 1");
 
 		System.out.print("Choose line: ");
 		int line3 = read.nextInt();
@@ -108,7 +107,7 @@ public class Program {
 //**Player 2 turn
 		System.out.println();
 		System.out.println("--------------------------");
-		System.out.println("PLAYER 2:");
+		System.out.println("        PLAYER 2");
 
 		System.out.print("Choose line: ");
 		int line4 = read.nextInt();
@@ -129,12 +128,15 @@ public class Program {
 			System.out.println();
 		}
 		for (int i = 0; i < 3; i++) {
-			System.out.print("    " + i);
+			System.out.print("     " + i);
 		}
+		winCheck.checkWinY(board);
+		winCheck.checkWinX(board);
+
 //*Player 1 turn _________________________________________
 		System.out.println();
 		System.out.println("--------------------------");
-		System.out.println("PLAYER 1:");
+		System.out.println("        PLAYER 1");
 
 		System.out.print("Choose line: ");
 		int line5 = read.nextInt();
@@ -158,10 +160,15 @@ public class Program {
 			System.out.print("     " + i);
 		}
 
+		System.out.println();
+
+		winCheck.checkWinY(board);
+		winCheck.checkWinX(board);
+
 // **Player 2 turn
 		System.out.println();
 		System.out.println("--------------------------");
-		System.out.println("PLAYER 2:");
+		System.out.println("        PLAYER 2");
 
 		System.out.print("Choose line: ");
 		int line6 = read.nextInt();
@@ -182,13 +189,16 @@ public class Program {
 			System.out.println();
 		}
 		for (int i = 0; i < 3; i++) {
-			System.out.print("    " + i);
+			System.out.print("     " + i);
 		}
+
+		winCheck.checkWinY(board);
+		winCheck.checkWinX(board);
 
 // *Player 1 turn _________________________________________
 		System.out.println();
 		System.out.println("--------------------------");
-		System.out.println("PLAYER 1:");
+		System.out.println("        PLAYER 1");
 
 		System.out.print("Choose line: ");
 		int line7 = read.nextInt();
@@ -212,10 +222,13 @@ public class Program {
 			System.out.print("     " + i);
 		}
 
+		winCheck.checkWinY(board);
+		winCheck.checkWinX(board);
+
 // **Player 2 turn
 		System.out.println();
 		System.out.println("--------------------------");
-		System.out.println("PLAYER 2:");
+		System.out.println("        PLAYER 2");
 
 		System.out.print("Choose line: ");
 		int line8 = read.nextInt();
@@ -236,20 +249,21 @@ public class Program {
 			System.out.println();
 		}
 		for (int i = 0; i < 3; i++) {
-			System.out.print("    " + i);
+			System.out.print("     " + i);
 		}
-
+		winCheck.checkWinY(board);
+		winCheck.checkWinX(board);
 // *Player 1 turn _________________________________________
 		System.out.println();
 		System.out.println("--------------------------");
-		System.out.println("PLAYER 1:");
+		System.out.println("        PLAYER 1");
 
 		System.out.print("Choose line: ");
 		int line9 = read.nextInt();
 		System.out.print("Choose column: ");
 		int column9 = read.nextInt();
 		board[line9][column9] = "X";
-		// board8
+// board8
 		for (int i = 0; i < 3; i++) {
 			System.out.print(i + " ");
 			for (int j = 0; j < 3; j++) {
@@ -265,6 +279,11 @@ public class Program {
 		for (int i = 0; i < 3; i++) {
 			System.out.print("     " + i);
 		}
+
+		winCheck.checkWinY(board);
+		winCheck.checkWinX(board);
+
+		read.close();
 
 	}
 }
