@@ -78,7 +78,7 @@ public class WinCheck {
 			System.exit(0);
 		} else {
 			if (board[2][0] == "O" && board[1][1] == "O" && board[0][2] == "O") {
-				System.out.println("Player Y wins!");
+				System.out.println("Player 2 wins!");
 				System.exit(0);
 			}
 		}
