@@ -11,3 +11,4 @@ No desenvolvimento do jogo foram seguidos os seguintes passos:
 6- Inserida a lógica de empate;
 7- Inserida a lógica de escolha de posição inválida por estar ocupada;
 8- Comando de término do jogo inserido em cada lógica de vitória;
+9- Tratada as exceções de InputMismatch e ArrayOutOfBounds e classe Board criada;
