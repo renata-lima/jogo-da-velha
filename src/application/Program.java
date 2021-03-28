@@ -6,6 +6,11 @@ import entities.Board;
 import entities.WinCheck;
 
 public class Program {
+	
+	public static String buildPlayerNumber(Integer playerNumber) {
+		return "\n--------------------------\n" + "        PLAYER " + playerNumber;
+	}
+	
 
 	public static void main(String[] args) {
 		Scanner read = new Scanner(System.in);
@@ -17,9 +22,7 @@ public class Program {
 		boardx.printBoard(board);
 
 //*Player 1 turn	
-		System.out.println();
-		System.out.println("--------------------------");
-		System.out.println("        PLAYER 1");
+		System.out.println(buildPlayerNumber(1));
 
 		System.out.print("Choose line: ");
 		int line1 = read.nextInt();
@@ -39,9 +42,7 @@ public class Program {
 //board2
 		boardx.printBoardTurns(board);
 //**Player 2 turn
-		System.out.println();
-		System.out.println("--------------------------");
-		System.out.println("        PLAYER 2");
+		System.out.println(buildPlayerNumber(2));
 
 		System.out.print("Choose line: ");
 		read.nextLine();
@@ -69,10 +70,8 @@ public class Program {
 
 //board3
 		boardx.printBoardTurns(board);
-//*Player 1 turn _________________________________________
-		System.out.println();
-		System.out.println("--------------------------");
-		System.out.println("        PLAYER 1");
+//*Player 1 turn 
+		System.out.println(buildPlayerNumber(1));
 
 		System.out.print("Choose line: ");
 		read.nextLine();
@@ -101,9 +100,7 @@ public class Program {
 		boardx.printBoardTurns(board);
 
 //**Player 2 turn
-		System.out.println();
-		System.out.println("--------------------------");
-		System.out.println("        PLAYER 2");
+		System.out.println(buildPlayerNumber(2));
 
 		System.out.print("Choose line: ");
 		read.nextLine();
@@ -135,10 +132,8 @@ public class Program {
 		winCheck.checkWinY(board);
 		winCheck.checkWinX(board);
 
-//*Player 1 turn _________________________________________
-		System.out.println();
-		System.out.println("--------------------------");
-		System.out.println("        PLAYER 1");
+//*Player 1 turn
+		System.out.println(buildPlayerNumber(1));
 
 		System.out.print("Choose line: ");
 		read.nextLine();
@@ -171,9 +166,7 @@ public class Program {
 		winCheck.checkWinX(board);
 
 // **Player 2 turn
-		System.out.println();
-		System.out.println("--------------------------");
-		System.out.println("        PLAYER 2");
+		System.out.println(buildPlayerNumber(2));
 
 		System.out.print("Choose line: ");
 		read.nextLine();
@@ -205,10 +198,8 @@ public class Program {
 		winCheck.checkWinY(board);
 		winCheck.checkWinX(board);
 
-// *Player 1 turn _________________________________________
-		System.out.println();
-		System.out.println("--------------------------");
-		System.out.println("        PLAYER 1");
+// *Player 1 turn 
+		System.out.println(buildPlayerNumber(1));
 
 		System.out.print("Choose line: ");
 		read.nextLine();
@@ -241,9 +232,7 @@ public class Program {
 		winCheck.checkWinX(board);
 
 // **Player 2 turn
-		System.out.println();
-		System.out.println("--------------------------");
-		System.out.println("        PLAYER 2");
+		System.out.println(buildPlayerNumber(2));
 
 		System.out.print("Choose line: ");
 		read.nextLine();
@@ -274,10 +263,8 @@ public class Program {
 		System.out.println();
 		winCheck.checkWinY(board);
 		winCheck.checkWinX(board);
-// *Player 1 turn _________________________________________
-		System.out.println();
-		System.out.println("--------------------------");
-		System.out.println("        PLAYER 1");
+// *Player 1 turn 
+		System.out.println(buildPlayerNumber(1));
 
 		System.out.print("Choose line: ");
 		read.nextLine();
@@ -308,7 +295,6 @@ public class Program {
 		System.out.println();
 		winCheck.checkWinY(board);
 		winCheck.checkWinX(board);
-
 //draw	
 		System.out.println("That's a draw!");
 		read.close();
