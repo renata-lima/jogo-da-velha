@@ -1,3 +1,3 @@
 # jogo-da-velha
-Jogo simples para praticar lógica de programação.
+Jogo simples para praticar logica de programacao.
 
